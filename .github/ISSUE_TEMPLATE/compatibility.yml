@@ -1,0 +1,43 @@
+name: Share a compatibility result
+description: Report success or failure on a specific VMware setup.
+title: "[Result] Host / VMware version / guest"
+body:
+  - type: markdown
+    attributes:
+      value: "Please share versions and observations, never your full VM configuration, credentials, or raw logs. Display-mode verification is different from measuring delivered frames."
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Host OS and hardware, VMware version, guest OS and architecture, Tools/graphics driver if known, monitor and host refresh rate.
+    validations:
+      required: true
+  - type: dropdown
+    id: result
+    attributes:
+      label: Result
+      options:
+        - 120 Hz guest display mode reported
+        - Still 60 Hz
+        - Other result or regression
+    validations:
+      required: true
+  - type: textarea
+    id: observations
+    attributes:
+      label: Before and after
+      description: Resolution, desktop mode, active signal mode, chosen refresh rate, and whether changing resolution was needed. Include any deviation from the five tested values.
+    validations:
+      required: true
+  - type: textarea
+    id: measurement
+    attributes:
+      label: Measurements and persistence
+      description: State what you actually checked. Include tools, duration, CPU observations, and behavior after reboot or suspend if tested. Leave unmeasured items explicitly unmeasured.
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy
+      options:
+        - label: I removed credentials, personal identifiers, full VM configurations, and private paths from this report.
+          required: true

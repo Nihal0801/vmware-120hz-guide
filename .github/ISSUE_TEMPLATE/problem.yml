@@ -1,0 +1,32 @@
+name: Troubleshooting or documentation problem
+description: Describe an unsuccessful attempt or a problem with the guide.
+title: "[Problem] Brief description"
+body:
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Host OS/hardware, VMware version, guest OS, graphics driver, and physical display mode.
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Expected and observed behavior
+      description: Include the exact step where the problem occurred and any error text, with private data removed.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps already tried
+      description: Was the guest fully shut down and VMware quit? Did you refresh the resolution? Did rollback restore the previous behavior?
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy
+      options:
+        - label: This report contains no credentials, complete VM configurations, raw logs, or unredacted personal data.
+          required: true

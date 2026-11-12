@@ -1,0 +1,16 @@
+# Never publish real VM data or session backups.
+*.vmx
+*.vmxf
+*.vmwarevm/
+*.vmdk
+*.vmem
+*.vmss
+*.vmsn
+*.nvram
+*.lck
+*.log
+*.bak
+change-record.json
+original-*
+.DS_Store
+__pycache__/

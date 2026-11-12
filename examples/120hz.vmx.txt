@@ -1,0 +1,5 @@
+guestinfo.svga.wddm.vsyncDefaultHz = "120"
+guestinfo.svga.wddm.vsyncMaxHz = "120"
+guestinfo.svga.wddm.vsyncThread = "TRUE"
+mks.lowCompositingFPS = "120"
+mks.maxCompositingFPS = "120"
