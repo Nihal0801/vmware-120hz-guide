@@ -70,3 +70,11 @@ The current record is a written account of an observed session, not a public per
 The [original author](https://www.reddit.com/r/vmware/comments/1x64h5x/vmware_workstation_refresh_rate_fix/) reports testing Windows 11 and Ubuntu guests in Workstation 17.5.1 on Windows 11. A commenter reports success at 120 Hz on macOS without detailed version information. These remain **external reports**, separate from this project's direct verification.
 
 Submit additional results through the [compatibility form](https://github.com/Nihal0801/vmware-120hz-guide/issues/new?template=compatibility.yml). A successful report should describe its measurement level; a failure is useful evidence too.
+
+## Follow-up: restart persistence and disk-lock recovery
+
+The maintainer subsequently reported that Windows returns to 60 Hz on every restart despite the five entries remaining saved. An earlier 120 Hz check after startup did not establish automatic persistence and must not be interpreted as such. No automatic activation solution has been verified.
+
+A later startup failure reported “Directory not empty.” The local log identified a disk lock belonging to a process that was no longer running. After quitting Fusion, checking that no VM process or disk handle remained, and preserving the stale lock outside the VM package, startup succeeded without modifying the virtual disk. The cause of the original process exit was not established. Do not infer that arbitrary lock files are safe to remove.
+
+Pause/unpause, suspend/resume, guest restart, and clean shutdown/start completed during follow-up tests. Clean shutdown released the disk lock normally and preserved the five configuration entries. These operational tests do **not** prove that 120 Hz was automatically active after each transition.

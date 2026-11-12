@@ -22,6 +22,9 @@ This repository documents the exact change, the sequence that worked, and how to
 > [!IMPORTANT]
 > Verification here means **Windows displayed a 120 Hz mode**. We have not measured 120 distinct frames per second reaching the physical display, game FPS, input latency, battery impact, or long-term stability. This is a community workaround, not a VMware/Broadcom-supported fix.
 
+> [!WARNING]
+> **Restart persistence issue confirmed by the maintainer:** Windows returns to 60 Hz after restart even though the five entries remain saved. The resolution-change trigger may be needed again. This is currently a session workaround, not a verified automatic or permanent fix. An automatic activation method is being investigated and is not yet available or verified.
+
 ## Start here
 
 | Your setup | Where to go |
